@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color:darkolivegreen;">나를 눌러봐 !!</h1>
+</body>
+<script>
+    document.querySelector("h1").addEventListener("click", function({target}){
+        console.log(target.innerText);  //나를 눌러봐 !!
+    });
+</script>
+</html>
