@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="includes_e.js"></script>
+    <title>e포함된 li</title>
 </head>
 <body>
     <ul>
@@ -14,4 +13,16 @@
         <li>strawberry</li>
     </ul>
 </body>
+<script>
+    function print(){
+        let list=document.querySelectorAll("li");
+        let listArray=Array.from(list);//li노드로 구성된 배열
+        let eArray=listArray.filter(function(v){
+            return v.innerText.includes("e"); //e라는 글자가 포함되어있으면
+        });
+        return eArray.length;
+  }
+  
+  console.log(print());
+</script>
 </html>
