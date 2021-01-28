@@ -10,19 +10,21 @@
 </body>
 <script>
     function getObj(){
-        const name="crong";
-        const getName=function(){
+        let name="crong";
+        let getName=function(){
             return name;
         }
-        const setName=function(newname){
+        let setName=function(newname){
             name=newname;
         }
-        const printName=function(){
+        let printName=function(){
             console.log(name);
         }
         return {getName, setName}
     }
-    var obj=getObj();
-    console.log(obj.getName());
+    let obj=getObj();
+    console.log(obj.getName()); //crong
+    console.log(obj.setName("judi"));   //undefined
+    console.log(obj.getName()); //judi
 </script>
 </html>
