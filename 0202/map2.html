@@ -8,13 +8,16 @@
 <body>
     <script>
         //WeakMap
+
+        const wm=new WeakMap();
+
         function Area(height,width){
-            this.height=height;
-            this.width=width;
+            wm.set(this, {height,width});   //key,value
         }
 
         Area.prototype.getArea=function(){
-            return this.height*this.width;
+            const {height,width}=wm.get(this);  //get value
+            return height*width;
         }
 
         let myarea=new Area(10,20);
