@@ -13,6 +13,9 @@
         let ws=new WeakSet();
 
         ws.add(arr);
+        //ws.add(111); 객체가 아니라서 에러
+        //ws.add("111");  객체가 아니라서 에러
+        ws.add(function(){});
         console.log(ws);
     </script>
 </body>
