@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //map은 key/value
+
+        let wm=new WeakMap();
+        let myfun=function(){};
+        //이 함수가 얼마나 실행됐지?를 알려고 할 때.
+
+        wm.set(myfun,0);
+
+        console.log(wm);
+    </script>
+</body>
+</html>
