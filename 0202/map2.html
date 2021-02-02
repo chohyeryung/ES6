@@ -9,19 +9,26 @@
     <script>
         //WeakMap
 
-        const wm=new WeakMap();
+        const obj={};
 
         function Area(height,width){
-            wm.set(this, {height,width});   //key,value
+            obj.height=height;
+            obj.width=width;
         }
 
         Area.prototype.getArea=function(){
-            const {height,width}=wm.get(this);  //get value
-            return height*width;
+            return obj.height*obj.width;
         }
 
         let myarea=new Area(10,20);
+
         console.log(myarea.getArea());
+
+        console.log(obj);
+
+        myarea=null;
+
+        console.log(obj);   //똑같이 잘 출력
     </script>
 </body>
 </html>
