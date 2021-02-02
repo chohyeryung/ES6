@@ -16,6 +16,14 @@
         wm.set(myfun,0);
 
         console.log(wm);
+
+        for(let i=0; i<10; i++){
+            count=wm.get(myfun);    //get value
+            count++;
+            wm.set(myfun,count);
+        }
+
+        console.log(wm);
     </script>
 </body>
 </html>
